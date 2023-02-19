@@ -1,0 +1,23 @@
+{
+  "name": "express-app-academind",
+  "version": "1.0.0",
+  "description": "Learning the Express server side framework deeply",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exemplar-codes/express-app-academind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exemplar-codes/express-app-academind/issues"
+  },
+  "homepage": "https://github.com/exemplar-codes/express-app-academind#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
