@@ -2,7 +2,19 @@ const express = require("express"); // can be named anything, since CommonJS
 
 const app = express();
 
-app.use((req, res) => {
+// HTML response
+app.get("/", (req, res) => {
+  res.send(`<h1>Welcome to the site</h1>
+  <h2>Checkout other pages</h2>
+  <p>
+    <ul>
+      <li><a href="/text">/text</a></li>
+    </ul>
+  </p>
+  `);
+});
+
+app.get("/text", (req, res) => {
   res.send("Hello, world");
 });
 
