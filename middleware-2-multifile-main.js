@@ -8,14 +8,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1st GET in the server. Runs - OK
-app.get("/", sideFileMiddlewares);
-
-// 3rd "method" middleware in the server. Runs - OK
-app.all("/", (req, res, next) => {
-  console.log("app.All METHODS ran");
-  next();
-});
+app.get("/shop", sideFileMiddlewares);
 
 app.use((req, res, next) => {
   console.log("Main 2 ran", "\n---");

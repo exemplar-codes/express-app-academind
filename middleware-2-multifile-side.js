@@ -2,9 +2,15 @@ const express = require("express");
 
 const app = express();
 
-// 2nd GET in the server. Runs - OK
+// No trimming. So won't run
 app.get("/", (req, res, next) => {
   console.log("Side 1 ran");
+  next();
+});
+
+// runs, since path matches
+app.get("/shop", (req, res, next) => {
+  console.log("Side shop 1 ran");
   next();
 });
 
