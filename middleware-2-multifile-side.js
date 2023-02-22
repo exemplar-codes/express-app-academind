@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 
-app.use((req, res, next) => {
+app.get("/", (req, res, next) => {
   console.log("Side 1 ran");
   next();
 });

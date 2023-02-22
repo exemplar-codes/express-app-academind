@@ -8,10 +8,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(sideFileMiddlewares);
+app.get("/", sideFileMiddlewares);
 
 app.use((req, res, next) => {
-  console.log("Main 2 ran");
+  console.log("Main 2 ran", "\n---");
   next();
 });
 
