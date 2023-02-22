@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
       <li><a href="/html">/html</a></li>
       <li><a href="/music">/music</a></li>
       <li><a href="/image">/image</a></li>
+      <li><a href="/zip-file">/zip-file</a></li>
     </ul>
   </p>
   `);
@@ -40,5 +41,9 @@ app.get("/image", (req, res) =>
 app.get("/music", (req, res) =>
   res.sendFile("./perception.mp3", { root: __dirname })
 );
+
+app.get("/zip-file", (req, res) =>
+  res.sendFile("./zip-file.zip", { root: __dirname })
+); // direct consumption not possible, so downloaded
 
 app.listen(3000, () => console.log("Server running on port 3000"));
