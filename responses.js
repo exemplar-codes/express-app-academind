@@ -84,4 +84,10 @@ app.get("/redirect", (req, res, next) => {
   // res.redirect("/some-path"); // redirect to /some-path
 });
 
+// redirects
+app.get("/chain", (req, res, next) => {
+  res.status(203).send("Chaining of Express response functions");
+  // not possible with inherited node:http methods
+});
+
 app.listen(3000, () => console.log("Server running on port 3000"));
